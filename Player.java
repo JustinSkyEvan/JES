@@ -33,16 +33,63 @@ public class Player implements StrategicPlayer {
 	{
 		
 		char[] thisArray = revealedPattern.toString().toCharArray();
-		for (int i = 0; i < coinsPerWheel; i++)
+		if (coinsPerWheel == 4 && revealsPerSpin ==2)
 		{
-			if (thisArray[i] != '-')
+			int first = -1;
+			int second = -1;
+			for (int i = 0; i < coinsPerWheel; i++)
 			{
-				thisArray[i] = 'H';
+				if (thisArray[i] != '-')
+				{
+					if (first == -1)
+					{
+						first = i;
+					}
+					else if (second == -1)
+					{
+						second = i;
+					}
+				}
+			
 			}
+			System.out.println("first: " + first + " second: " + second);
+			thisArray[first] = flip(thisArray[first]);
+				if (thisArray[second] != thisArray[first])
+				{
+					thisArray[second] = flip(thisArray[second]);
+				}
+					
 		}
+		else 
+		{
+			for (int i = 0; i < coinsPerWheel; i++)
+			{
+			if (thisArray[i] != '-')
+				{
+					thisArray[i] = 'H';
+				}
+			} 
+		}
+		
+		
+		
+		
 		String newPattern = new String(thisArray);
 		return newPattern;
 		
 		//return "flip_these";
+	}
+	
+	private char flip (char c){
+		if (c == 'H')
+		{
+			return 'T';
+		}
+		else if (c == 'T')
+		{
+			return 'H';
+		}
+		else
+			return 'E';
 	}
 }
