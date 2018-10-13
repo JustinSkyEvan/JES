@@ -52,7 +52,7 @@ public class Player implements StrategicPlayer {
 				}
 			
 			}
-			System.out.println("first: " + first + " second: " + second);
+			
 			thisArray[first] = flip(thisArray[first]);
 				if (thisArray[second] != thisArray[first])
 				{
