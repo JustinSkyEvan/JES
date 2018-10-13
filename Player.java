@@ -1,3 +1,15 @@
+/**
+ * Player is an implementation of the StrategicPlayer interface.
+ * A simple strategy is employed to attempt to win a game with four coins and
+ * two reveals per turn.  A simpler strategy is use to play a game with any other
+ * setup.
+ * 
+ * @author Evan Ballinger
+ * @author Tien Liu
+ * @author Justin Wu
+ * @version 20181013
+ */
+
 public class Player implements StrategicPlayer {
 	private int coinsPerWheel;
 	private int revealsPerSpin;
@@ -7,9 +19,12 @@ public class Player implements StrategicPlayer {
 		coinsPerWheel = newCoinsPerWheel;
 		revealsPerSpin = newRevealsPerSpin;
 		maxNumSpins = newMaxNumSpins;
-		//System.out.println("\nstarting new game: " + coinsPerWheel + " coins," + revealsPerSpin + " reveals, " + maxNumSpins + " spins");
+		
 	}
 	
+	/**
+	* @return chosen pattern of coins to reveal
+	*/
 	public CharSequence getSlotsToReveal() {
 		
 		CharSequence thisSequence = "";
@@ -25,10 +40,12 @@ public class Player implements StrategicPlayer {
 			}
 		}
 		return thisSequence;
-		
-		//return "reveal_these";
 	}
 	
+	/**
+	* @param revealedPattern a charSequence for the player to consider for flipping coins
+	* @return the input statement with zero or more coins flipped
+	*/
 	public CharSequence getNewCoinStates(CharSequence revealedPattern)
 	{
 		
@@ -52,7 +69,7 @@ public class Player implements StrategicPlayer {
 				}
 			
 			}
-			System.out.println("first: " + first + " second: " + second);
+		
 			thisArray[first] = flip(thisArray[first]);
 				if (thisArray[second] != thisArray[first])
 				{
@@ -70,16 +87,14 @@ public class Player implements StrategicPlayer {
 				}
 			} 
 		}
-		
-		
-		
-		
 		String newPattern = new String(thisArray);
 		return newPattern;
-		
-		//return "flip_these";
 	}
 	
+	/**
+	* Returns the oppostie coin state of the one that is passed as a param
+	* @param c input coin state, should be 'H' or 'T'
+	*/
 	private char flip (char c){
 		if (c == 'H')
 		{
