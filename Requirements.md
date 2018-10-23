@@ -1,7 +1,7 @@
 # Group Members
 Evan Ballinger
 
-Tien Liu
+Tian Liu
 
 Justin Wu
 
@@ -17,3 +17,16 @@ Create an implementation class of the StrategicPlayer interface.  The class shou
     - Given the user creates a new Player object and calls the beginGame method, passing int values for coinsPerWheel, revealsPerSpin, and maxNumSpins.
     - When the user calls getSlotsToReveal, 
     - Then the return value will be a charSequence with length = coinsPerWheel
+2. Requirement: The method getSlotsToReveal must return a string with exact number of '?' as permitted by reveals-per-spin.
+    - Given the user creates a new Player object and calls the beginGame method, passing int values for coinsPerWheel, revealsPerSpin, and maxNumSpins.
+    - When the user calls getSlotsToReveal, 
+    - Then the return value will be a charSequence contains number of '?' = revealsPerSpin.
+    
+3. Requirement: The method getNewCoinStates must return a string of "proper length".
+    - Given the user creates a new Player object, passing int values for coinsPerWheel, revealsPerSpin, and revealePattern that consists of '-', 'H', 'T'.
+    - When the user calls getNewCoinStates, 
+    - Then the return value will be a charSequence with length = coinsPerWheel
+4. Requirement: The method getSlotsToReveal must return a string of proper pattern consisting '-', 'H', 'T'.
+    - Given the user creates a new Player object, passing int values for coinsPerWheel, revealsPerSpin, and revealePattern that consists of '-', 'H', 'T'.
+    - When the user calls getNewCoinStates, 
+    - Then the return value will be a charSequence that 'H' and 'T' might replaced by either 'T' or 'H'.

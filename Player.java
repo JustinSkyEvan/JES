@@ -11,11 +11,13 @@
  */
 
 public class Player implements StrategicPlayer {
-	private int coinsPerWheel;
-	private int revealsPerSpin;
-	private int maxNumSpins;
+	  public  int coinsPerWheel;
+	  public int revealsPerSpin;
+	  public int maxNumSpins;
+
 	
-	public void beginGame(int newCoinsPerWheel, int newRevealsPerSpin, int newMaxNumSpins) {
+        
+    public void beginGame(int newCoinsPerWheel, int newRevealsPerSpin, int newMaxNumSpins) {
 		coinsPerWheel = newCoinsPerWheel;
 		revealsPerSpin = newRevealsPerSpin;
 		maxNumSpins = newMaxNumSpins;
