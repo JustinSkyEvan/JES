@@ -1,12 +1,12 @@
 # Player class implementation
-Author: Justin Wu, Evan , Sky
+Author: Justin Wu, Evan Ballinger, Tian Liu
 Version: 20181023.1
 Copyright (c) 2018
 1. Project Name
 Spin the Wheel Coin Matching Game
 2. Directory Organization
 2.1 Top-Level:
-Overview and Instructions (README.TXT)
+Instructions (README.TXT)
 Java source code in unnamed package (*.java)
 JUnit source code test classes (*Test.java)
 Buildfile for Ant (build.xml)
