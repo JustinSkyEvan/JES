@@ -1,7 +1,7 @@
 # Group Members
 Evan Ballinger
 
-Tien Liu
+Tian Liu
 
 Justin Wu
 
