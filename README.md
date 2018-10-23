@@ -9,7 +9,7 @@ Version: 20181023.1
 Copyright (c) 2018
 
 ## 1. Project Name
-**Spin the Wheel Coin Matching Game
+Spin the Wheel Coin Matching Game
 
 ## 2. Project Description and Requirements
 
